@@ -1,7 +1,7 @@
 # learning-angular
 Learning AngularJS from scratch.
 
-## Setting up the environment
+## Setting Up the Environment
 
 First of all, you need to have Node.js installed.
 
@@ -38,3 +38,20 @@ So, this is what our `bower.json` will look like -- for now.
 And we'll update this file as we go along.
 
 One more thing: we don't want to commit the Angular framework files along with our project. So we put the entire `bower_components` folder inside `.gitignore` file.
+
+## Getting Started
+
+Well, as much as I want to start coding right away, setup is not finished yet. We need a server to run our application. Angular does work if you just run the `index.html` file, but as the application gets more complex, it won't work properly because the browser -- for security matters -- will not execute some scripts. So I have read. Don't take my word for it.
+
+But anyway, we need a http-server. We could write one ourselves, but a simpler solution would be to install `http-server`.
+
+> `http-server` is a simple, zero-configuration command-line http server. It is powerful enough for production usage, but it's simple and hackable enough to be used for testing, local development, and learning.
+
+That's exactly what we need.
+
+And now we'll need another configuration file: `package.json`. This is the [documentation](https://docs.npmjs.com/files/package.json "package.json documentation") if you want to read more details about it. But for now, this is all we need to know:
+
+> All npm packages contain a file, usually in the project root, called package.json - this file holds various metadata relevant to the project. This file is used to give information to npm that allows it to identify the project as well as handle the project's dependencies.
+
+
+
