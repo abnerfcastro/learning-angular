@@ -25,7 +25,7 @@ We can install packages with `bower install <package>`, but in order to make it 
 
 So, this is what our `bower.json` will look like -- for now.
 
-```
+```json
 {
     "name": "learning-angular",
     "version": "0.0.0",
@@ -52,6 +52,26 @@ That's exactly what we need.
 And now we'll need another configuration file: `package.json`. This is the [documentation](https://docs.npmjs.com/files/package.json "package.json documentation") if you want to read more details about it. But for now, this is all we need to know:
 
 > All npm packages contain a file, usually in the project root, called package.json - this file holds various metadata relevant to the project. This file is used to give information to npm that allows it to identify the project as well as handle the project's dependencies.
+
+We tell `npm` the dependencies of our project, just like we told `bower`. That said, the structure of the file is something like this:
+
+```json
+{
+    "name": "learning-angular",
+    "private": true,
+    "version": "0.0.0",
+    "description": "Learning AngularJS from scratch.",
+    "repository": "https://github.com/abnerfcastro/learning-angular.git",
+    "license": "MIT",
+    "devDependencies": {
+        "http-server": "^0.9.0"
+    },
+    "scripts": {
+        "prestart": "npm install",
+        "start": "http-server ./app -a localhost -p 8000 -c-1"
+    }
+}
+```
 
 
 
