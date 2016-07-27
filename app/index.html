@@ -3,8 +3,11 @@
     <head>
         <title>My First Angular App</title>
         <link rel="stylesheet" href="app.css">
+        <script src="bower_components/angular/angular.js"></script>
     </head>
     <body>
         <p>Hello World!</p>
+        <p>This is an area not affected by Angular. No ng-app tag here!</p>
+        <p ng-app>This area is controlled by Angular. Let's try: 5 + 2 = {{5 + 2}}</p>
     </body>
 </html>
