@@ -15,7 +15,7 @@ npm install -g bower
 
 Installed packages will be placed in a `bower_components` directory. This is created in the folder which the `bower` program was executed. In order to change this destination, we will add a file named `.bowerrc` file to our project, because we want `bower_components` to be inside the `app` folder -- just because. For now, the contents of `.bowerrc` will be as follows:
 
-```
+```json
 {
   "directory": "app/bower_components"
 }
@@ -72,6 +72,17 @@ We tell `npm` the dependencies of our project, just like we told `bower`. That s
     }
 }
 ```
+
+Now, we know we need `http-server`. But we need to tell `npm` we do! We can either install it _globally_ on our machine, like we did with `bower`, or we can install it _locally_ on our project directory. The way we write the `package.json` file is so that `npm` will know exactly what to install -- we specified in `devDependencies` -- and also how to start our project. That is as handy as _Makefiles_, I'm telling ya!
+
+Notice that we're telling it how to start the server. You can read more about `http-server` in the [documentation](https://www.npmjs.com/package/http-server "http-server documentation"). But this is pretty much what we need to know:
+
+- `./app`, we tell that this is the directory of our project;
+- `-a` the address to use for the server. The default is `0.0.0.0`, but we'll use `localhost`;
+- `-p` the port to listen to;
+- `-c-1`to disable caching time.
+
+Finally!, we can start our project. To start the server, simply run `npm start`. It will install the dependencies in a directory called `node_components` (if not already installed) and start the server to listen to port `8000`. Fancy, uh? 
 
 
 
