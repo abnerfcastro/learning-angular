@@ -4,10 +4,18 @@
         <title>My First Angular App</title>
         <link rel="stylesheet" href="app.css">
         <script src="bower_components/angular/angular.js"></script>
+        <script src="script.js"></script>
     </head>
-    <body>
-        <p>Hello World!</p>
-        <p>This is an area not affected by Angular. No ng-app tag here!</p>
-        <p ng-app>This area is controlled by Angular. Let's try: 5 + 2 = {{5 + 2}}</p>
+    <body ng-app="githubViewer">                
+        <!-- Wherever you see the directive ng-app it means that that area is controlled by Angular -->
+        <div ng-controller="MainController">
+            <h1>{{ message }}</h1>
+            <p>{{ error }}</p>
+            <div>Name: {{ user.name }}</div>
+            <div>Company: {{ user.company }}</div>
+            <div>
+                <img ng-src="{{ user.avatar_url }}" title="{{ user.name }}" width="150px" height="150px">
+            </div>        
+        </div>        
     </body>
 </html>
