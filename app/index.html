@@ -1,21 +1,41 @@
+
+<!--
+  --  Author: Abner Castro
+  --  Date: July 26th, 2016
+  --  Description:
+  --    Based on Pluralsight course AngularJS: Get Started by Scott Allen.
+  --    Creates a module that that will hold a controller called MainController
+  -->
+
+
 <!doctype html>
 <html>
-    <head>
-        <title>My First Angular App</title>
-        <link rel="stylesheet" href="app.css">
-        <script src="bower_components/angular/angular.js"></script>
-        <script src="script.js"></script>
-    </head>
-    <body ng-app="githubViewer">                
-        <!-- Wherever you see the directive ng-app it means that that area is controlled by Angular -->
-        <div ng-controller="MainController">
-            <h1>{{ message }}</h1>
-            <p>{{ error }}</p>
-            <div>Name: {{ user.name }}</div>
-            <div>Company: {{ user.company }}</div>
-            <div>
-                <img ng-src="{{ user.avatar_url }}" title="{{ user.name }}" width="150px" height="150px">
-            </div>        
-        </div>        
-    </body>
+<head>
+    <title>My First Angular App</title>
+    <link rel="stylesheet" href="app.css">
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="script.js"></script>
+</head>
+<body ng-app="githubViewer">
+    <!-- Wherever you see the directive ng-app it means that that area is controlled by Angular -->
+    <div ng-controller="MainController">
+
+        <h1>{{message}}</h1>
+
+        {{countdown}}
+        <form name="searchUser" ng-submit="search()">
+            <input type="search" required placeholder="Username to find" ng-model="username" />
+            <input type="submit" value="Search" />
+        </form>
+
+        <div>
+            <p>Searching for: {{username}}</p>
+            <p>{{error}}</p>
+        </div>
+
+    <div ng-include="'userdetails.html'" ng-show="user"></div>
+
+    </div>
+</body>
+
 </html>
