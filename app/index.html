@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="app.css">
     <script src="bower_components/angular/angular.js"></script>
     <script src="script.js"></script>
+    <script src="github.js"></script>
 </head>
 
 <body ng-app="githubViewer">
@@ -33,7 +34,7 @@
 
             <div>
                 <p>Searching for: {{username}}</p>
-                <p>{{error}}</p>
+                <p ng-show="!user">{{error}}</p>
             </div>
         </section>
 
