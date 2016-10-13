@@ -1,0 +1,16 @@
+<div>
+    <section>
+
+        {{countdown}}
+        <p>Type in your GitHub username:</p>
+        <form name="searchUser" ng-submit="search(username)">
+            <input class="input" type="search" required placeholder="Username to find" ng-model="username" />
+            <input class="button" type="submit" value="Search" />
+        </form>
+
+        <div>
+            <p>Searching for: {{username}}</p>
+            <p ng-show="!user">{{error}}</p>
+        </div>
+    </section>
+</div>

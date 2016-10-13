@@ -8,39 +8,23 @@
 
 
 <!doctype html>
-<html>
+<html ng-app="githubViewer">
 
 <head>
     <title>My First Angular App</title>
     <link rel="stylesheet" href="app.css">
     <script src="bower_components/angular/angular.js"></script>
-    <script src="script.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="MainController.js"></script>
+    <script src="UserController.js"></script>
+    <script src="RepoController.js"></script>
     <script src="github.js"></script>
 </head>
 
-<body ng-app="githubViewer">
-    <!-- Wherever you see the directive ng-app it means that that area is controlled by Angular -->
-    <div ng-controller="MainController">
-
-        <section>
-            <h1>{{message}}</h1>
-
-            {{countdown}}
-            <p>Type in your GitHub username:</p>
-            <form name="searchUser" ng-submit="search()">
-                <input class="input" type="search" required placeholder="Username to find" ng-model="username" />
-                <input class="button" type="submit" value="Search" />
-            </form>
-
-            <div>
-                <p>Searching for: {{username}}</p>
-                <p ng-show="!user">{{error}}</p>
-            </div>
-        </section>
-
-        <div ng-include="'userdetails.html'" ng-show="user"></div>
-
-    </div>
+<body>
+    <h1>Github Viewer</h1>
+    <div ng-view></div>
 </body>
 
 </html>
