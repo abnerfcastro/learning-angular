@@ -1,0 +1,145 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+@import url(https://fonts.googleapis.com/css?family=Dosis);
+
+body {
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: 'Dosis';
+}
+
+section {
+	width: 50%;
+	position: relative;
+	margin: 0 auto;
+}
+		
+section h1, h2 {
+	text-align: center;
+	margin: 30px 0;
+}
+
+form {
+	position: relative;
+	width: 100%;
+    display: flex;
+	align-items: flex-end;
+	flex-wrap: wrap;    
+}
+
+.input {
+	width: 79%;
+	margin: 5px auto;
+	padding: 6px;
+}
+
+.button {    
+    margin: 5px auto;
+    width: 19%;
+    background-color: #86DEA1;
+    border: none;
+    border-radius: 2px;
+    color: #159D3E;
+    padding: 6px 6px;
+    text-align: center;
+    display: inline-block;
+    font-size: 12px;
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: #159D3E; /* Green */
+    color: white;
+}
+
+div.repoTable {
+    padding-top: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+div.userPlaceholder {
+    margin-left: 35%;
+    margin-right: 35%;
+    padding: 10px 10px 10px 10px;
+    background-color: #CDF7DA;
+    border-radius: 2px;
+}
+
+div.username {
+    text-align: center;
+    font-size: 16pt;
+}
+
+div.pictureHolder {
+    border-radius: 50%;
+}
+
+.userpicture {
+    width: 100px;
+    height: 100px; 
+    border-radius: 50%; 
+}
+
+div.userInfoPlaceholder {
+    width: 100px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.userInfoPlaceholder:hover div.userInfo {
+    transition: 0.5s;
+    opacity: 1;
+}
+
+div.userInfo {
+    font-size: 12pt;
+    text-align: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+select {
+    border: 1px solid #ddd;
+    background: transparent;
+    width: 200px;
+    height: 25px;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.orderby {
+    width: 200px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th, td, th {
+    border-bottom: 1px solid #ddd;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: left;
+}
+
+tr:hover {background-color: #f5f5f5}
+
+table {
+    font-family: 'Ubuntu',serif;    
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    height: 30px;
+    font-size: 10pt;
+}
+
+th {
+    height: 30px;
+    font-size: 12pt;
+    padding: 10px;
+    text-align: center;
+}
