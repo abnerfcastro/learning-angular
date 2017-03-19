@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="project" class="ng-cloak">
+
+<head>
+    <title>Web Boilerplate</title>
+    <meta charset="utf-8">
+    <!-- Bootstrap Local -->
+    <link rel="stylesheet" href="vendor\bootstrap\dist\css\bootstrap.min.css">
+    <link rel="stylesheet" href="vendor\bootstrap\dist\css\bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css\main.css">
+    <!-- Bootstrap CDN -->
+    <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
+    <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">-->
+</head>
+
+<body>
+    <div class="container">
+        <!-- Very Simple Navbar -->
+        <nav class="navbar navbar-default navbar-fixed-top" ng-controller="MainController as $ctrl">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">{{$ctrl.brand}}</a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li ui-sref-active="active"><a ui-sref="hello">Hello</a></li>
+                        <li ui-sref-active="active"><a ui-sref="about">About</a></li>
+                        <li ui-sref-active="active"><a ui-sref="people">People</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <ui-view></ui-view>
+        <uir-state-vis class="statevis" width="300" height="100"></uir-state-vis>
+    </div>
+</body>
+
+<!-- CDN Files -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+<!-- Bootstrap .js File -->
+<!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
+
+<!-- Vendor Files -->
+<script src="vendor\jquery\dist\jquery.min.js"></script>
+<script src="vendor\bootstrap\dist\js\bootstrap.min.js"></script>
+<script src="vendor\angular\angular.min.js"></script>
+<script src="vendor\angular-ui-router\release\angular-ui-router.min.js"></script>
+
+<script src="//npmcdn.com/show-current-browser-url"></script>
+<script src="//npmcdn.com/d3@3"></script>
+<script src="//npmcdn.com/ui-router-visualizer@1"></script>
+
+<!-- App Js Files -->
+<script src="js\project.js"></script>
+
+<!-- App Angular Files -->
+<script src="..\app.js"></script>
+<script src="..\controllers\main.controller.js"></script>
+<script src="..\common\services\people.service.js"></script>
+<script src="..\common\components\people.component.js"></script>
+<script src="..\common\components\person.component.js"></script>

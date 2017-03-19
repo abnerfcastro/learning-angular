@@ -1,0 +1,14 @@
+{
+  "name": "ui-routing-exercise",
+  "authors": [
+    "Abner Castro <abnerfcastro@gmail.com>"
+  ],
+  "description": "Learning Angular UI Routing",
+  "main": "",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "1.6.2",
+    "bootstrap": "^3.3.7",
+    "angular-ui-router": "1.0.0-rc.1"
+  }
+}
