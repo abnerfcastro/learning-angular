@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app.core" class="ng-cloak">
+<style type="text/css">
+	.completed {
+		color: red;
+		font-weight: 800;
+	}
+	
+	[ng-cloak] {
+		display: none !important;
+	}
+</style>
+
+<head>
+	<title>Learning Angular Promises</title>
+	<meta charset="utf-8">
+</head>
+
+<body ng-controller="TaskListCtrl as ctrl">
+	<!-- ng-cloak not working, for a change... -->
+	<h1>Todo List</h1>
+	<p><a href="#" ng-click="ctrl.getLocalTodos()">From Local JSON</a> | <a href="#" ng-click="ctrl.getApiTodos()">From Remote API</a></p>
+	<p ng-show="ctrl.loading" ng-cloak>Loading...</p>
+	<div ng-hide="ctrl.loading" ng-repeat="task in ctrl.todos">
+		<ul>
+			<li class="ng-cloak" ng-class="{completed : task.completed}" ng-bind="task.title"></li>
+		</ul>
+	</div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+<script src="app.js"></script>
+
+</html>
