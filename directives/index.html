@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app.core">
+
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="public/css/style.css" rel="stylesheet">
+</head>
+
+<body ng-cloak>
+	<!-- This works... a simple directive and a simple controller using $scope service -->
+	<div ng-controller="SillyCustomerCtrl">
+		<silly-customer-shared></silly-customer-shared>
+		<hr>
+		<silly-customer-isolated name="{{customer.name}}"></silly-customer-isolated>
+	</div>
+
+	<div>
+		<hr>
+		<span>The following element is a directive that manipulates the DOM</span>
+		<br>
+		<my-dom-directive>Click me!</my-dom-directive>
+	</div>
+
+	<div ng-controller="BindingDemoCtrl">
+		<hr>
+		<div>The following is controlled by the controller.</div>
+		<div>Message: <span ng-click="changeMessage()">{{message}}</span> -- one way data binded.</div>
+		<div>Counter: <span ng-click="increment()">{{counter}}</span> -- two way data binded.</div>
+		<div class="action-link" ng-click="reset()">Reset</div>
+		<br><br>
+		<div>The following is controlled by the directive.</div>
+		<binding-demo-isolated-directive message="{{message}}" counter='counter' action="reset()"></binding-demo-isolated-directive>
+		<br>
+		<div>Click on the message to change what it says. Click on the counter to increment it.</div>
+	</div>
+
+	<!-- Angular JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<!-- Custom Files -->
+	<script src="app/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+/*!
+ * public/css/style.css
+ * 
+ * 
+ * Author: Abner Castro
+ * Date: May 31th, 2017
+ */
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
